@@ -1,5 +1,5 @@
-from fasthtml.common import *
 import matplotlib.pyplot as plt
+from fasthtml.common import *
 
 # Import QueryBase, Employee, Team from employee_events
 #### YOUR CODE HERE
@@ -11,16 +11,8 @@ import matplotlib.pyplot as plt
 Below, we import the parent classes
 you will use for subclassing
 """
-from base_components import (
-    Dropdown,
-    BaseComponent,
-    Radio,
-    MatplotlibViz,
-    DataTable
-    )
-
-from combined_components import FormGroup, CombinedComponent
-
+from base_components import BaseComponent, DataTable, Dropdown, MatplotlibViz, Radio
+from combined_components import CombinedComponent, FormGroup
 
 # Create a subclass of base_components/dropdown
 # called `ReportDropdown`

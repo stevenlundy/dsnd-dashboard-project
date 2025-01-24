@@ -1,6 +1,7 @@
-from sqlite3 import connect
-from pathlib import Path
 from functools import wraps
+from pathlib import Path
+from sqlite3 import connect
+
 import pandas as pd
 
 # Using pathlib, create a `db_path` variable
