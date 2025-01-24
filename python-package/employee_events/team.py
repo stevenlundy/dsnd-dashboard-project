@@ -1,26 +1,22 @@
-# Import the QueryBase class
 from .query_base import QueryBase
 
 
-# Create a subclass of QueryBase
-# called  `Team`
 class Team(QueryBase):
+    """
+    This class is a subclass of QueryBase
+    It contains methods for querying the employee_events database
+    for team data
+    """
 
-    # Set the class attribute `name`
-    # to the string "team"
     name = "team"
 
-    # Define a `names` method
-    # that receives no arguments
-    # This method should return
-    # a list of tuples from an sql execution
     def names(self):
+        """
+        This method returns a list of tuples
+        containing the team name and team_id
+        for all teams in the database
+        """
 
-        # Query 5
-        # Write an SQL query that selects
-        # the team_name and team_id columns
-        # from the team table for all teams
-        # in the database
         sql = f"""
                 SELECT team_name, team_id
                 FROM team
@@ -28,18 +24,13 @@ class Team(QueryBase):
 
         return self.query(sql)
 
-    # Define a `username` method
-    # that receives an ID argument
-    # This method should return
-    # a list of tuples from an sql execution
     def username(self, id: int):
+        """
+        This method returns a list of tuples
+        containing the team name of the team
+        with the given id
+        """
 
-        # Query 6
-        # Write an SQL query
-        # that selects the team_name column
-        # Use f-string formatting and a WHERE filter
-        # to only return the team name related to
-        # the ID argument
         sql = f"""
                 SELECT team_name
                 FROM team
@@ -48,14 +39,12 @@ class Team(QueryBase):
 
         return self.query(sql)
 
-    # Below is method with an SQL query
-    # This SQL query generates the data needed for
-    # the machine learning model.
-    # Without editing the query, alter this method
-    # so when it is called, a pandas dataframe
-    # is returned containing the execution of
-    # the sql query
     def model_data(self, id):
+        """
+        This method returns a pandas dataframe
+        with the number of positive and negative events
+        for the team with the given id
+        """
 
         sql = f"""
                 SELECT positive_events, negative_events FROM (
