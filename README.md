@@ -18,6 +18,13 @@ pyenv virtualenv 3.11.2 dsnd-dashboard-project
 pyenv local dsnd-dashboard-project
 ```
 
+### Build employee_events package
+
+```bash
+cd python-package
+python setup.py sdist
+```
+
 ### Install dependencies
 
 ```bash
