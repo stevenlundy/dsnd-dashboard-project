@@ -16,7 +16,7 @@ class Dropdown(BaseComponent):
             option = Option(
                 text,
                 value=value,
-                selected="selected" if str(value) == entity_id else "",
+                selected="selected" if str(value) == str(entity_id) else "",
             )
             options.append(option)
 
