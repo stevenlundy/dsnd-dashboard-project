@@ -3,7 +3,8 @@ from pathlib import Path
 from setuptools import find_packages, setup
 
 cwd = Path(__file__).resolve().parent
-requirements = (cwd / "employee_events" / "requirements.txt").read_text().split("\n")
+requirements_path = cwd / "employee_events" / "requirements.txt"
+requirements = (requirements_path).read_text().split("\n")
 
 setup_args = dict(
     name="employee_events",

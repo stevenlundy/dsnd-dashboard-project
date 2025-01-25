@@ -7,7 +7,7 @@ from sqlite3 import connect
 
 import numpy as np
 import pandas as pd
-from scipy.stats import expon, norm, skewnorm, uniform
+from scipy.stats import expon, norm, skewnorm
 from sklearn.linear_model import LogisticRegression
 
 cwd = Path(".").resolve()
@@ -57,7 +57,11 @@ profiles = {
 }
 
 employees = {}
-is_recruited = lambda x: np.random.choice([0, 1], p=[1 - x, x])
+
+
+def is_recruited(chance):
+    return np.random.choice([0, 1], p=[1 - chance, chance])
+
 
 for employee_id in range(1, 26):
 
