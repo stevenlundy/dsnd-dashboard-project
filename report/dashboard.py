@@ -95,7 +95,8 @@ class BarChart(MatplotlibViz):
 
         fig, ax = plt.subplots()
 
-        ax.barh([""], [pred])
+        color = plt.cm.RdYlGn(1 - pred)
+        ax.barh([""], [pred], color=color)
         ax.set_xlim(0, 1)
         ax.set_title("Predicted Recruitment Risk", fontsize=20)
 
