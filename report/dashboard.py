@@ -105,7 +105,9 @@ class BarChart(MatplotlibViz):
 class Visualizations(CombinedComponent):
 
     children = [LineChart(), BarChart()]
-    outer_div_type = Div(cls="grid")
+    outer_div_type = Div(
+        cls="grid", style="background-color: rgba(255, 255, 255, 0.5);"
+    )
 
 
 class NotesTable(DataTable):
