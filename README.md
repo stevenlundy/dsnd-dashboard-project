@@ -40,6 +40,15 @@ pip install pre-commit
 pre-commit install
 ```
 
+## Testing
+
+Tests are written using the `pytest` framework. To run the tests, use the following command:
+
+```bash
+pip install pytest
+pytest tests
+```
+
 
 ## Repository Structure
 ```
