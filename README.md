@@ -3,7 +3,54 @@
 
 This repository contains starter code for the **Software Engineering for Data Scientists** final project. Please reference your course materials for documentation on this repository's structure and important files. Happy coding!
 
-### Repository Structure
+## Setup
+
+### pyenv
+
+Pyenv is a tool that allows you to manage multiple versions of Python on your machine. This project uses Python 3.11.2. To install pyenv and set the local python version, run the following commands:
+
+```bash
+# Install pyenv
+brew install pyenv
+pyenv install 3.11.2
+pyenv virtualenv 3.11.2 dsnd-dashboard-project
+# Set the local python version
+pyenv local dsnd-dashboard-project
+```
+
+### Build employee_events package
+
+```bash
+cd python-package
+python setup.py sdist
+```
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Install pre-commit
+
+This project uses pre-commit to ensure that code is formatted correctly before committing. To install pre-commit, run the following commands:
+
+```bash
+pip install pre-commit
+pre-commit install
+```
+
+## Testing
+
+Tests are written using the `pytest` framework. To run the tests, use the following command:
+
+```bash
+pip install pytest
+pytest tests
+```
+
+
+## Repository Structure
 ```
 ├── README.md
 ├── assets
@@ -40,7 +87,7 @@ This repository contains starter code for the **Software Engineering for Data Sc
     └── test_employee_events.py
 ```
 
-### employee_events.db
+## employee_events.db
 
 ```mermaid
 erDiagram
