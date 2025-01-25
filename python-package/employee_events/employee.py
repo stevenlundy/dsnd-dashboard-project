@@ -17,11 +17,11 @@ class Employee(QueryBase):
         for all employees in the database
         """
 
-        sql = f"""
+        sql = """
                 SELECT first_name || ' ' || last_name full_name,
                      employee_id
                 FROM employee
-                """
+              """
 
         return self.query(sql)
 

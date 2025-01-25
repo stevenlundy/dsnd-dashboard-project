@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from employee_events import Employee, Team
-from fasthtml.common import *
+from fasthtml.common import *  # noqa: F401, F403
+from fasthtml.common import H1, Div, fast_app, serve
 
 from utils import load_model
 

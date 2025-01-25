@@ -17,10 +17,10 @@ class Team(QueryBase):
         for all teams in the database
         """
 
-        sql = f"""
+        sql = """
                 SELECT team_name, team_id
                 FROM team
-                """
+              """
 
         return self.query(sql)
 
